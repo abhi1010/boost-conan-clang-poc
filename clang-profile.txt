@@ -1,0 +1,26 @@
+[settings]
+os=Linux
+os.distro=Fedora
+os_build=Linux
+arch=x86_64
+arch_build=x86_64
+compiler=clang
+compiler.version=9
+compiler.libcxx=libstdc++11
+compiler.cppstd=gnu20
+
+[options]
+boost:extra_b2_flags="cxxflags=-flto -ffat-lto-objects" "linkflags=-flto -ffat-lto-objects"
+boost:fPIC=False
+boost:without_test=True
+
+[build_requires]
+
+[env]
+CMAKE_CXX_COMPILER=/opt/clang90/bin/clang++
+CMAKE_C_COMPILER=/opt/clang90/bin/clang
+CXX=/opt/clang90/bin/clang++
+CC=/opt/clang90/bin/clang
+
+
+
